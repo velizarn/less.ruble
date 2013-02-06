@@ -1,12 +1,12 @@
 
-Create less_config.yml file:
+Create _less_config.yml_ file:
 
 ```yaml
 ---
 css_destination_folder: "/assets/css"
 js_destination_folder: "/assets/js"
 ```
-Create wro.xml file:
+Create _wro.xml_ file to point where are your source files:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -25,3 +25,10 @@ Create wro.xml file:
 ```
 
 Select a file from your project or place the cursor inside the editor then go to Eclipse menu > Commands > Less > Compile CSS (JS)
+
+So for above example if you have two source files called
+_/src/less/reset.css_
+_/src/less/style.less_
+
+Wro4j Runner will create a new file
+_/assets/css/styles.css_
