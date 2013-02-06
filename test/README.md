@@ -27,8 +27,8 @@ Create _wro.xml_ file to point where are your source files:
 Select a file from your project or place the cursor inside the editor then go to Eclipse menu > Commands > Less > Compile CSS (JS)
 
 So for above example if you have two source files called
-_/src/less/reset.css_
-_/src/less/style.less_
+/src/less/reset.css
+/src/less/style.less
 
 Wro4j Runner will create a new file
-_/assets/css/styles.css_
+/assets/css/styles.css
