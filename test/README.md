@@ -1,3 +1,4 @@
+##How to use
 
 Create **less_config.yml** file with destination folders:
 
