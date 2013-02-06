@@ -27,7 +27,7 @@ these paths are relative to the project root
 
 Select a file from your project or place the cursor inside the editor then go to Eclipse menu > Commands > Less > Compile CSS (JS)
 
-So for above example if you have two source files called
+So for above example with following source files:
 
 /src/less/reset.css
 ```css
