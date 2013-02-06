@@ -1,12 +1,12 @@
 
-Create **less_config.yml** file:
+Create **less_config.yml** file with destination folders:
 
 ```yaml
 ---
 css_destination_folder: "/assets/css"
 js_destination_folder: "/assets/js"
 ```
-Create **wro.xml** file to point where are your source files:
+Create **wro.xml** file to point where are your source files located:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
