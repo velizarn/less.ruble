@@ -19,10 +19,16 @@ command 'Compile CSS' do |cmd|
 
     context.exit_show_tool_tip('Failed to load project LESS settings') if destinationDir.nil? || destinationDir.empty? || projectDir.nil? || projectDir.empty?
 
+    if File.directory?(destinationDir) then
+      outpuDestinationFolder = destinationDir
+    else
+      outpuDestinationFolder = projectDir+destinationDir
+    end
+
     lessCommand = "java -jar wro4j-runner-1.6.2-jar-with-dependencies.jar --preProcessors lessCss,cssMinJawr"
     lessCommand << " --contextFolder "+projectDir
     lessCommand << " --wroFile "+projectDir+"/wro.xml"
-    lessCommand << " --destinationFolder "+projectDir+destinationDir+" -m --targetGroups styles"
+    lessCommand << " --destinationFolder "+outpuDestinationFolder+" -m --targetGroups styles"
 
     Ruble::Logger.log_info("Start LESS compiler...")
 
@@ -49,10 +55,16 @@ command 'Compile JS' do |cmd|
 
     context.exit_show_tool_tip('Failed to load project LESS settings') if destinationDir.nil? || destinationDir.empty? || projectDir.nil? || projectDir.empty?
 
+    if File.directory?(destinationDir) then
+      outpuDestinationFolder = destinationDir
+    else
+      outpuDestinationFolder = projectDir+destinationDir
+    end
+
     lessCommand = "java -jar wro4j-runner-1.6.2-jar-with-dependencies.jar --preProcessors lessCss "
     lessCommand << " --contextFolder "+projectDir
     lessCommand << " --wroFile "+projectDir+"/wro.xml"
-    lessCommand << " --destinationFolder "+projectDir+destinationDir
+    lessCommand << " --destinationFolder "+outpuDestinationFolder
     lessCommand << " --targetGroups scripts -m -c jsMin"
 
     Ruble::Terminal.open("cd "+commandPathLib)
