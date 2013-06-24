@@ -66,7 +66,7 @@ body {
 }
 ```
 
-Wro4j Runner will create a new file
+Wro4j Runner will create two files:
 
 /assets/css/styles.css
 ```css
@@ -74,5 +74,21 @@ body {
   font-size: 100%;
   font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
-#header{color:#6c94be;background:#f5f5f5;padding:5px;}.header{color:#ffffff;}.border-radius{border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
+#header {
+  color: #6c94be;
+  background: #f5f5f5;
+  padding: 5px;
+}
+.header {
+  color: #ffffff;
+}
+.border-radius {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+```
+/assets/css/styles.min.css
+```css
+body{font-size:100%;font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;}#header{color:#6c94be;background:#f5f5f5;padding:5px;}.header{color:#ffffff;}.border-radius{border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
 ```
