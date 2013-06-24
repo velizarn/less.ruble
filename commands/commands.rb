@@ -30,16 +30,16 @@ command 'Compile CSS' do |cmd|
 
     xmldoc = Document.new(File.new(projectDir+"/wro.xml"))
 
-    arr = Array.new
+    groups = Array.new
 
     xmldoc.elements.each("/groups/group[child::css]"){|e|
-      arr.push e.attributes["name"]
+      groups.push e.attributes["name"]
     }
 
     lessCommand = "java -jar wro4j-runner-1.6.2-jar-with-dependencies.jar --preProcessors lessCss,cssMinJawr"
     lessCommand << " --contextFolder "+projectDir
     lessCommand << " --wroFile "+projectDir+"/wro.xml"
-    lessCommand << " --destinationFolder "+outpuDestinationFolder+" -m --targetGroups "+arr.join(',')
+    lessCommand << " --destinationFolder "+outpuDestinationFolder+" -m --targetGroups "+groups.join(',')
 
     Ruble::Logger.log_info("Start LESS compiler...")
 
@@ -74,17 +74,17 @@ command 'Compile JS' do |cmd|
 
     xmldoc = Document.new(File.new(projectDir+"/wro.xml"))
 
-    arr = Array.new
+    groups = Array.new
 
     xmldoc.elements.each("/groups/group[child::js]"){|e|
-      arr.push e.attributes["name"]
+      groups.push e.attributes["name"]
     }
 
     lessCommand = "java -jar wro4j-runner-1.6.2-jar-with-dependencies.jar --preProcessors lessCss "
     lessCommand << " --contextFolder "+projectDir
     lessCommand << " --wroFile "+projectDir+"/wro.xml"
     lessCommand << " --destinationFolder "+outpuDestinationFolder
-    lessCommand << " --targetGroups "+arr.join(',')+" -m -c jsMin"
+    lessCommand << " --targetGroups "+groups.join(',')+" -m -c jsMin"
 
     Ruble::Terminal.open("cd "+commandPathLib)
     Ruble::Terminal.open(lessCommand)
