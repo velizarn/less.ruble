@@ -15,6 +15,11 @@ Create **wro.xml** file to point where are your source files located:
 
 	<group name="styles">
 		<css minimize="false">/src/less/reset.css</css>
+		<css minimize="false">/src/less/style.less</css>
+	</group>
+
+	<group name="styles.min">
+		<css minimize="false">/src/less/reset.css</css>
 		<css minimize="true">/src/less/style.less</css>
 	</group>
 
