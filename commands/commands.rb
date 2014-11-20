@@ -35,12 +35,12 @@ command 'Compile CSS' do |cmd|
     xmldoc.elements.each("/groups/group[child::css]"){|e|
       groups.push e.attributes["name"]
     }
-		
-	if Less.config('pre_processors').to_s.nil? || Less.config('pre_processors').to_s.empty? then
-		preProcessors = "lessCss,cssCompressor"
-	else
-		preProcessors = Less.config('pre_processors').to_s
-	end	
+
+    if Less.config('pre_processors').to_s.nil? || Less.config('pre_processors').to_s.empty? then
+    	preProcessors = "lessCss,cssCompressor"
+    else
+    	preProcessors = Less.config('pre_processors').to_s
+    end
 
     lessCommand = "java -jar wro4j-runner-1.6.2-jar-with-dependencies.jar --preProcessors "+preProcessors # "cssMinJawr" each tag on a new line :(
     lessCommand << " --contextFolder "+projectDir
