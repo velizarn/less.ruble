@@ -6,10 +6,10 @@ Optimize and/or Minimize CSS/JS files from your eclipse based IDE by using Wro4j
 
 velizarn@webdevgears.com
 
-### Dependencies
+### Credits
 
 * [http://lesscss.org/](http://lesscss.org/)
-* [http://code.google.com/p/wro4j/wiki/wro4jRunner](http://code.google.com/p/wro4j/wiki/wro4jRunner)
+* [http://code.google.com/p/wro4j/wiki/wro4jRunner](https://code.google.com/p/wro4j/wiki/wro4jRunner)
 * [https://github.com/alexo/wro4j](https://github.com/alexo/wro4j)
 
 ### License
