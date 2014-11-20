@@ -9,10 +9,11 @@ module Lessconfig
 
     def initialize(file="less_config.yml")
       @file = file
-      @config = YAML.load_file(ENV['TM_PROJECT_DIRECTORY']+"/"+@file)
     end
 
     def getvalue(key, group=nil, type=nil)
+
+      @config = YAML.load_file(ENV['TM_PROJECT_DIRECTORY']+"/"+@file)
 
       if type == nil then
         return (group != nil) ? @config.fetch(group)[key] : @config[key]
