@@ -14,7 +14,6 @@ velizarn@webdevgears.com
 
 ### Links
 
-* [http://web-resource-optimization.blogspot.com/2011/02/simple-client-side-build-system-with.html](http://web-resource-optimization.blogspot.com/2011/02/simple-client-side-build-system-with.html)
 * [http://lesscss.org/usage/](http://lesscss.org/usage/)
 * [http://eclipse.org/downloads/](http://eclipse.org/downloads/)
 * [https://github.com/aptana/studio3](https://github.com/aptana/studio3)
